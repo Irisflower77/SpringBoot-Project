@@ -13,15 +13,15 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfiguration {
     @Bean
     public InMemoryUserDetailsManager userDetailsManager(){
-        UserDetails lamiae= User.builder()
-                .username("lamiae")
-                .password("{noop}lamiae")
+        UserDetails khawla= User.builder()
+                .username("khawla")
+                .password("{noop}khawla")
                 .roles("Administrateur").build();
-        UserDetails nadia= User.builder()
-                .username("nadia")
-                .password("{noop}nadia")
+        UserDetails ahlam= User.builder()
+                .username("ahlam")
+                .password("{noop}ahlam")
                 .roles("Patient").build();
-        return new InMemoryUserDetailsManager(lamiae,nadia);
+        return new InMemoryUserDetailsManager(khawla,ahlam);
 
     }
     @Bean
